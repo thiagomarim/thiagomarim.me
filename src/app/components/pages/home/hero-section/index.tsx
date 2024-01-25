@@ -4,15 +4,15 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export function HeroSection() {
   return (
     <section className="w-full lg:h-[755px] bg-hero-image bg-start bg-no-repeat flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px]">
-      <div className="container flex items-center text-center lg:text-start lg:items-start lg:justify-between flex-col lg:flex-row">
+      <div className="container flex items-center text-center lg:text-start justify-center lg:items-start lg:justify-between flex-col lg:flex-row">
         <div className="w-full flex flex-col gap-2 lg:gap-5">
           <span className="flex items-center gap-5 justify-center lg:justify-normal text-4xl sm:text-6xl lg:text-7xl font-bold text-white content-[''] before:w-[10px] before:bg-blue-500 before:h-[26px] sm:before:content-[''] sm:before:bg-blue-500 sm:before:w-[15px] sm:before:h-[50px] sm:before:inline-block">
             Desenvolvedor
           </span>
-          <span className="text-4xl sm:text-6xl lg:text-7xl font-bold ml-[35px] text-white">
+          <span className="text-4xl sm:text-6xl lg:text-7xl font-bold lg:ml-[35px] text-white">
             Front-end
           </span>
-          <span className="text-[#A9A9B2] ml-[35px] sm:text-lg  lg:text-xl text-center lg:text-start">
+          <span className="text-[#A9A9B2] lg:ml-[35px] sm:text-lg  lg:text-xl text-center lg:text-start">
             Localizado em São Paulo - Brazil
           </span>
         </div>
@@ -55,16 +55,16 @@ export function HeroSection() {
           <div className="flex items-center gap-5 justify-center lg:justify-start">
             <a
               href=""
-              className="text-[#E1E1E6] hover:text-white transition-colors"
+              className="text-[#E1E1E6] hover:text-white hover:scale-90 transition-all"
             >
-              <FaGithub size={32} />
+              <FaGithub size={26} />
             </a>
 
             <a
               href=""
-              className="text-[#E1E1E6] hover:text-white transition-colors"
+              className="text-[#E1E1E6] hover:text-white hover:scale-90 transition-all"
             >
-              <FaLinkedin size={32} />
+              <FaLinkedin size={26} />
             </a>
           </div>
         </div>
