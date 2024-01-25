@@ -55,7 +55,7 @@ export function Card({ img, title, desc, download, techs, more }: CardProps) {
           <a
             download={true}
             href="/CV-ThiagoSoaresMarim.pdf"
-            className="text-white text-[14px] flex items-center justify-center gap-2 text-center bg-[#007DB3] hover:bg-[#176485] py-3 rounded-md mt-4 lg:mt-8 hover:scale-95 transition-all"
+            className="text-white text-[14px] flex items-center justify-center gap-2 text-center bg-blue-500 hover:bg-blue-600 py-3 rounded-md mt-4 lg:mt-8 hover:scale-95 transition-all"
           >
             Baixar CV
             <HiDownload />

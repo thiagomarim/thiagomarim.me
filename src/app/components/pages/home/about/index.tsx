@@ -1,5 +1,5 @@
-import { Card } from "@/app/components/Card";
-import { Title } from "@/app/components/Title";
+import { Card } from "@/app/components/card";
+import { Title } from "@/app/components/title";
 
 export function About() {
   return (

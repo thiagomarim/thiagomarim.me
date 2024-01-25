@@ -5,14 +5,14 @@ export function HeroSection() {
   return (
     <section className="w-full lg:h-[755px] bg-hero-image bg-start bg-no-repeat flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-center text-center lg:text-start lg:items-start lg:justify-between flex-col lg:flex-row">
-        <div className="w-full max-w-[390px] lg:max-w-[448px] flex flex-col gap-2 lg:gap-5">
-          <span className="text-4xl text-center lg:text-start sm:text-6xl lg:text-7xl font-bold text-white">
+        <div className="w-full flex flex-col gap-2 lg:gap-5">
+          <span className="flex items-center gap-5 justify-center lg:justify-normal text-4xl sm:text-6xl lg:text-7xl font-bold text-white content-[''] before:w-[10px] before:bg-blue-500 before:h-[26px] sm:before:content-[''] sm:before:bg-blue-500 sm:before:w-[15px] sm:before:h-[50px] sm:before:inline-block">
             Desenvolvedor
           </span>
-          <span className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
+          <span className="text-4xl sm:text-6xl lg:text-7xl font-bold ml-[35px] text-white">
             Front-end
           </span>
-          <span className="text-[#A9A9B2] sm:text-lg  lg:text-xl text-center lg:text-start">
+          <span className="text-[#A9A9B2] ml-[35px] sm:text-lg  lg:text-xl text-center lg:text-start">
             Localizado em São Paulo - Brazil
           </span>
         </div>
