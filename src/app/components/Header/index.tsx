@@ -19,7 +19,7 @@ export function Header() {
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center gap-4">
           <Image width={44} height={44} src="/images/logo.svg" alt="" />
-          <span className="text-white text-xl font-bold">
+          <span className="text-white text-lg sm:text-xl font-bold">
             Thiago Soares Marim
           </span>
         </Link>
