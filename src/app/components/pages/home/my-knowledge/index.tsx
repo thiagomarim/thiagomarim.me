@@ -9,9 +9,11 @@ export function MyKnowledge() {
         desc="Fique a vontade para explorar todas as minhas competências e meus conhecimentos."
       />
       <div>
-        <div>
-          <h1 className="text-xl font-bold my-4">Desenvolvimento Web</h1>
-          <div className="flex items-center gap-4 flex-wrap">
+        <div className="mb-12">
+          <h1 className="text-xl text-center lg:text-start font-bold my-4">
+            Desenvolvimento Web
+          </h1>
+          <div className="flex items-center justify-center lg:justify-normal gap-4 flex-wrap">
             <CardTechs tech="HTML" img="/images/icons/html.svg" />
             <CardTechs tech="CSS" img="/images/icons/css.svg" />
             <CardTechs tech="JavaScript" img="/images/icons/javascript.svg" />
@@ -29,17 +31,21 @@ export function MyKnowledge() {
             />
           </div>
         </div>
-        <div>
-          <h1 className="text-xl font-bold my-4">Design</h1>
-          <div className="flex items-center gap-4 flex-wrap">
+        <div className="mb-12">
+          <h1 className="text-xl text-center lg:text-start font-bold my-4">
+            Design
+          </h1>
+          <div className="flex items-center justify-center lg:justify-normal gap-4 flex-wrap">
             <CardTechs tech="Adobe Photoshop" img="/images/icons/ps.svg" />
             <CardTechs tech="Adobe Illustrator" img="/images/icons/illus.svg" />
             <CardTechs tech="Figma" img="/images/icons/figma.svg" />
           </div>
         </div>
         <div>
-          <h1 className="text-xl font-bold my-4">Controle de Versão</h1>
-          <div className="flex items-center gap-4 flex-wrap">
+          <h1 className="text-xl text-center lg:text-start font-bold my-4">
+            Controle de Versão
+          </h1>
+          <div className="flex items-center justify-center lg:justify-normal gap-4 flex-wrap">
             <CardTechs tech="Git" img="/images/icons/git.svg" />
             <CardTechs tech="Github" img="/images/icons/github.svg" />
           </div>

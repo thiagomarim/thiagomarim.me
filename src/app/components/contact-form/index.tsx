@@ -29,7 +29,7 @@ export function ContactForm() {
 
   return (
     <section className="bg-[#202024] flex items-center justify-center py-16 border-t-2 border-[#323238]">
-      <div className="flex items-start gap-28">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start flex-wrap gap-28">
         <div>
           <Title
             title="Me mande uma mensagem!"
