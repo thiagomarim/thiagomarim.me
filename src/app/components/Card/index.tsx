@@ -1,14 +1,15 @@
 import Image from "next/image";
-import { HiDownload } from "react-icons/hi";
+import { HiArrowNarrowRight, HiDownload } from "react-icons/hi";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "../link";
 
 interface CardProps {
   img: string;
   title?: string;
   desc: string;
-  tech?: string;
   download?: boolean;
-  techs?: string;
-  more?: string;
+  techs?: string[];
+  more?: boolean;
 }
 
 export function Card({ img, title, desc, download, techs, more }: CardProps) {
@@ -24,9 +25,32 @@ export function Card({ img, title, desc, download, techs, more }: CardProps) {
         />
       </div>
       <div className="flex flex-col justify-center mb-6 sm:mb-6 xl:mb-0 mt-0 md:mt-5 xl:mt-0 mx-5 xl:mx-0">
-        <p className="font-normal text-base text-[#E1E1E6] max-w-[450px] leading-5 text-center sm:text-start lg:leading-6">
+        <h3 className="text-[#E1E1E6] text-xl mb-2 text-center sm:text-start">
+          {title}
+        </h3>
+        <p className="font-normal text-base text-[#A9A9B2] max-w-[450px] leading-5 text-center sm:text-start lg:leading-6">
           {desc}
         </p>
+        <div className="flex items-center justify-center sm:justify-normal gap-2 mt-4">
+          {techs?.map((tech) => (
+            <span
+              key={tech}
+              className="text-blue-300 bg-blue-900/80 text-sm py-1 px-3 rounded-lg"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        {more && (
+          <Link
+            href="/projects/dogs"
+            className="mt-4 flex items-center justify-center sm:justify-normal"
+          >
+            Ver projeto
+            <HiArrowNarrowRight />
+          </Link>
+        )}
+
         {download && (
           <a
             download={true}
