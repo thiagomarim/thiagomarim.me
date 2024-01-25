@@ -16,6 +16,7 @@ export function HighlightedProjects() {
         desc="Um site completo com o intuito de ser um blog para cachorros, utilizando React, React Router e API externas. Realizado no curso de React na origamid."
         techs={["React.js", "React Router", "Vite"]}
         more={true}
+        date="11/12/2023"
       />
       <Card
         img="/images/project.svg"
@@ -23,6 +24,7 @@ export function HighlightedProjects() {
         desc="Um site completo com o intuito de ser um blog para cachorros, utilizando React, React Router e API externas. Realizado no curso de React na origamid."
         techs={["React.js", "React Router", "Vite"]}
         more={true}
+        date="11/12/2023"
       />
       <Link href="/projects">
         Se interessou em algum? Ver todos

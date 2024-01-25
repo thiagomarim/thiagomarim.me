@@ -54,14 +54,16 @@ export function HeroSection() {
           </div>
           <div className="flex items-center gap-5 justify-center lg:justify-start">
             <a
-              href=""
+              href="https://github.com/thiagomarim"
+              target="_blank"
               className="text-[#E1E1E6] hover:text-white hover:scale-90 transition-all"
             >
               <FaGithub size={26} />
             </a>
 
             <a
-              href=""
+              href="https://www.linkedin.com/in/thiago-marim/"
+              target="_blank"
               className="text-[#E1E1E6] hover:text-white hover:scale-90 transition-all"
             >
               <FaLinkedin size={26} />
