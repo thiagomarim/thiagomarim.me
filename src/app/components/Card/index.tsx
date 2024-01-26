@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { HiArrowNarrowRight, HiDownload } from "react-icons/hi";
-import { Link } from "../link";
+import { HiDownload } from "react-icons/hi";
 import { cn } from "@/app/lib/utils";
+import { TiArrowForward } from "react-icons/ti";
+import { FaGithub } from "react-icons/fa";
 
 interface CardProps {
   img: string;
@@ -28,8 +29,8 @@ export function Card({
         <Image
           src={img}
           alt=""
-          width={500}
-          height={305}
+          width={420}
+          height={304}
           className="rounded-md"
         />
       </div>
@@ -44,7 +45,7 @@ export function Card({
           >
             {title}
           </h3>
-          <span className="text-sm text-[#A9A9B2]">{date}</span>
+          <span className="text-sm text-[#E1E1E6]">{date}</span>
         </div>
 
         <p className="font-normal text-base text-[#A9A9B2] max-w-[450px] leading-5 text-center sm:text-start lg:leading-6">
@@ -61,13 +62,22 @@ export function Card({
           ))}
         </div>
         {more && (
-          <Link
-            href="/projects/dogs"
-            className="mt-4 flex items-center justify-center sm:justify-normal"
-          >
-            Ver projeto
-            <HiArrowNarrowRight />
-          </Link>
+          <div className="flex items-center gap-3">
+            <a
+              href=""
+              className="flex items-center gap-2 mt-6 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all"
+            >
+              <TiArrowForward />
+              Visitar
+            </a>
+            <a
+              href=""
+              className="flex items-center gap-2 mt-6 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all"
+            >
+              <FaGithub />
+              Código Fonte
+            </a>
+          </div>
         )}
 
         {download && (

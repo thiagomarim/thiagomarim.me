@@ -1,3 +1,5 @@
+import { PageIntroduction } from "../components/pages/projects/page-introduction";
+
 export default function Projects() {
-  return <h1>Projetos</h1>;
+  return <PageIntroduction />;
 }
