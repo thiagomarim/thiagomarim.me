@@ -1,7 +1,12 @@
+import { CMSIcon } from "@/app/components/cms-icon";
+import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  homeInfo: HomePageInfo;
+}
+
+export function HeroSection({ homeInfo }: HeroSectionProps) {
   return (
     <section className="w-full lg:h-[755px] bg-hero-image bg-start bg-no-repeat flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-center text-center lg:text-start justify-center lg:items-start lg:justify-between flex-col lg:flex-row">
@@ -52,22 +57,17 @@ export function HeroSection() {
               totalmente apaixonado pelo Front-end.
             </span>
           </div>
-          <div className="flex items-center gap-5 justify-center lg:justify-start">
-            <a
-              href="https://github.com/thiagomarim"
-              target="_blank"
-              className="text-[#E1E1E6] hover:text-white hover:scale-90 transition-all"
-            >
-              <FaGithub size={26} />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/thiago-marim/"
-              target="_blank"
-              className="text-[#E1E1E6] hover:text-white hover:scale-90 transition-all"
-            >
-              <FaLinkedin size={26} />
-            </a>
+          <div className="flex text-2xl items-center gap-5 justify-center lg:justify-start">
+            {homeInfo.socials.map((contact, i) => (
+              <a
+                key={i}
+                href={contact.url}
+                target="_blank"
+                className="text-[#E1E1E6] hover:text-white hover:scale-90 transition-all"
+              >
+                <CMSIcon icon={contact.iconSvg} />
+              </a>
+            ))}
           </div>
         </div>
       </div>

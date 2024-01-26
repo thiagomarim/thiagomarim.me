@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "thiagomarim.me",
+  title: "thiagomarim.me ",
   description: "Portfolio do Thiago Soares Marim",
 };
 
