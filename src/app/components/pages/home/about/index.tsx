@@ -1,8 +1,11 @@
+"use client";
+
 import { RichText } from "@/app/components/rich-text";
 import { Title } from "@/app/components/title";
 import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
 import { HiDownload } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 interface AboutProps {
   aboutInfo: HomePageInfo;
@@ -15,7 +18,13 @@ export function About({ aboutInfo }: AboutProps) {
         title="Sobre mim"
         desc="Aqui você irá saber um pouco mais sobre mim."
       />
-      <div className="flex gap-2 xl:gap-14 flex-wrap md:flex-nowrap justify-center xl:justify-normal items-center m-auto bg-[#202024] border-[1px] border-[#323238] rounded-md">
+      <motion.div
+        className="flex gap-2 xl:gap-14 flex-wrap md:flex-nowrap justify-center xl:justify-normal items-center m-auto bg-[#202024] border-[1px] border-[#323238] rounded-md"
+        initial={{ opacity: 0, x: -150 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -150 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="py-6 px-6">
           <Image
             src="/images/about-img.svg"
@@ -38,7 +47,7 @@ export function About({ aboutInfo }: AboutProps) {
             <HiDownload />
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

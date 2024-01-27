@@ -11,6 +11,7 @@ import { SocialNetworks } from "../social-networks";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { motion } from "framer-motion";
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
@@ -48,9 +49,13 @@ export function ContactForm() {
             title="Me mande uma mensagem!"
             desc="Aqui você pode enviar uma mensagem para mim, quando você quiser."
           />
-          <form
+          <motion.form
             onSubmit={handleSubmit(handleClickSubmit)}
             className="mt-12 w-full flex flex-col gap-4"
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -150 }}
+            transition={{ duration: 0.5 }}
           >
             <input
               placeholder="Nome"
@@ -72,11 +77,17 @@ export function ContactForm() {
             <Button className="mt-6" disabled={isSubmitting}>
               Enviar mensagem <HiArrowNarrowRight size={18} />
             </Button>
-          </form>
+          </motion.form>
         </div>
         <div>
           <Title title="Fale comigo" />
-          <div className="flex flex-col flex-wrap gap-10">
+          <motion.div
+            className="flex flex-col flex-wrap gap-10"
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 150 }}
+            transition={{ duration: 0.5 }}
+          >
             <SocialNetworks
               type="Email"
               icon={<MdOutlineEmail />}
@@ -95,7 +106,7 @@ export function ContactForm() {
               social="Thiago Soares Marim"
               link="https://www.linkedin.com/in/thiago-marim/"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

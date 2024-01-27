@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { NavItem } from "./nav.item";
+import { motion } from "framer-motion";
 
 const NAV_ITEMS = [
   {
@@ -15,7 +18,12 @@ const NAV_ITEMS = [
 
 export function Header() {
   return (
-    <header className="w-full h-24 flex items-center justify-center">
+    <motion.header
+      className="w-full h-24 flex items-center justify-center"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center gap-4">
           <Image width={44} height={44} src="/images/logo.svg" alt="" />
@@ -30,6 +38,6 @@ export function Header() {
           ))}
         </nav>
       </div>
-    </header>
+    </motion.header>
   );
 }
