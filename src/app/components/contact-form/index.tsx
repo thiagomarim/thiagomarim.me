@@ -9,6 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { MdOutlineEmail } from "react-icons/md";
 import { SocialNetworks } from "../social-networks";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
@@ -19,13 +21,24 @@ const contactFormSchema = z.object({
 type contactFormData = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
-  const { handleSubmit, register } = useForm<contactFormData>({
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { isSubmitting },
+  } = useForm<contactFormData>({
     resolver: zodResolver(contactFormSchema),
   });
 
-  function handleClickSubmit(data: contactFormData) {
-    console.log(data);
-  }
+  const handleClickSubmit = async (data: contactFormData) => {
+    try {
+      await axios.post("/api/contact", data);
+      toast.success("Mensagem enviada com sucesso!");
+      reset();
+    } catch {
+      toast.error("Houve um erro, tente novamente!");
+    }
+  };
 
   return (
     <section className="bg-[#202024] flex items-center justify-center py-16 border-t-2 border-[#323238]">
@@ -56,7 +69,7 @@ export function ContactForm() {
               {...register("message")}
               className="resize-none w-full h-[138px] bg-[#121214] rounded-lg placeholder:text-[#A9A9B2] text-[#A9A9B2] p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <Button className="mt-6">
+            <Button className="mt-6" disabled={isSubmitting}>
               Enviar mensagem <HiArrowNarrowRight size={18} />
             </Button>
           </form>

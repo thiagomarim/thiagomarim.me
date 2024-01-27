@@ -1,4 +1,4 @@
-import { CMSIcon } from "@/app/components/cms-icon";
+import { CMSIcon } from "../../../../../../cms-icon";
 import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
 

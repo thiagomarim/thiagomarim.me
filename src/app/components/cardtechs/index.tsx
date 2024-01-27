@@ -1,6 +1,6 @@
 import { KnownTech } from "@/app/types/project";
 import Image from "next/image";
-import { CMSIcon } from "../cms-icon";
+import { CMSIcon } from "../../../../cms-icon";
 
 interface CardTechsProps {
   tech: KnownTech;
