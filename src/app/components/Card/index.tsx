@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { TiArrowForward } from "react-icons/ti";
 import { FaGithub } from "react-icons/fa";
@@ -16,7 +18,7 @@ export function Card({ project }: CardProps) {
           alt={`Thumbnail do projeto ${project.title}`}
           width={420}
           height={304}
-          className="rounded-md"
+          className="rounded-md hover:scale-95 hover:cursor-zoom-in transition-all duration-500"
         />
       </div>
       <div className="flex flex-col justify-center mb-6 sm:mb-6 xl:mb-0 mt-0 md:mt-5 xl:mt-0 mx-5 xl:mx-0">

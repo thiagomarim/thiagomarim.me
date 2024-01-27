@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col rounded-lg h-[436px] bg-[#202024] overflow-hidden border-2 border-[#323238] group">
+    <div className="flex flex-col rounded-lg h-[450px] bg-[#202024] overflow-hidden border-2 border-[#323238] group">
       <div className="w-full h-48 overflow-hidden">
         <Image
           src={project.thumbnail.url}
@@ -22,15 +22,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="flex flex-col flex-1 p-8">
-        <strong className="text-[#E1E1E6] text-xl">Dogs</strong>
-        <p className="text-[#A9A9B2] text-base mt-2">
+        <strong className="text-[#E1E1E6] text-xl">{project.title}</strong>
+        <div className="text-[#A9A9B2] text-base mt-2">
           {project.shortDescription}
-        </p>
-        <div className="flex items-center gap-2">
+        </div>
+        <div className="flex items-center flex-wrap gap-2 mt-3">
           {project.technologies.map((tech) => (
             <span
               key={tech.name}
-              className="max-w-max mt-3 text-[#E1E1E6] bg-blue-500 text-sm py-1 px-3 rounded-lg"
+              className="max-w-max text-[#E1E1E6] bg-blue-500 text-sm py-1 px-3 rounded-lg"
             >
               {tech.name}
             </span>
@@ -38,16 +38,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className="flex items-center gap-2 mt-3">
-          {project?.liveProjectUrl && (
-            <a
-              href={project.liveProjectUrl}
-              target="_blank"
-              className="flex items-center gap-2 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all"
-            >
-              <TiArrowForward />
-              Visitar
-            </a>
-          )}
+          <a
+            href={project.liveProjectUrl}
+            target="_blank"
+            className="flex items-center gap-2 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all"
+          >
+            <TiArrowForward />
+            Visitar
+          </a>
 
           <a
             href={project.githubUrl}
