@@ -20,7 +20,9 @@ export function Title({ title, desc }: TitleProps) {
         {title}
       </h1>
       <div>
-        <p className="text-center text-[#A9A9B2] max-w-[420px]">{desc}</p>
+        <span className="text-center text-[#A9A9B2] max-w-[420px]">
+          {desc}{" "}
+        </span>
       </div>
     </motion.div>
   );

@@ -39,10 +39,10 @@ export function HeroSection({ homeInfo }: HeroSectionProps) {
           transition={{ duration: 0.5 }}
         >
           <div className="mt-8">
-            <span className="text-[#E1E1E6] text-lg lg:text-lg">
+            <p className="text-[#E1E1E6] text-lg lg:text-lg">
               Olá, eu me chamo Thiago Soares Marim, sou Desenvolvedor totalmente
               apaixonado pelo Front-end.
-            </span>
+            </p>
           </div>
           <div className="flex items-center gap-5 justify-center">
             {homeInfo.socials.map((contact, i) => (

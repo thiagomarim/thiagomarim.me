@@ -35,9 +35,9 @@ export function About({ aboutInfo }: AboutProps) {
           />
         </div>
         <div className="flex flex-col justify-center mb-6 sm:mb-6 xl:mb-0 mt-0 md:mt-5 xl:mt-0 mx-5 xl:mx-0">
-          <p className="font-normal text-base text-[#E1E1E6] max-w-[450px] leading-5 text-center sm:text-start lg:leading-6">
+          <div className="font-normal text-base text-[#E1E1E6] max-w-[450px] leading-5 text-center sm:text-start lg:leading-6">
             <RichText content={aboutInfo.introduction.raw} />
-          </p>
+          </div>
           <a
             download={true}
             href="/CV-ThiagoSoaresMarim.pdf"
