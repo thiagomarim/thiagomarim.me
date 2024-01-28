@@ -69,7 +69,7 @@ export function HeroSection({ homeInfo }: HeroSectionProps) {
               Tech Stack
             </span>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center flex-wrap gap-6">
             <Image src="/images/icons/html.svg" width={40} height={40} alt="" />
             <Image src="/images/icons/css.svg" width={40} height={40} alt="" />
             <Image

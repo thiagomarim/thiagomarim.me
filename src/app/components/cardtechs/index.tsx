@@ -1,5 +1,4 @@
 import { KnownTech } from "@/app/types/project";
-import Image from "next/image";
 import { CMSIcon } from "../cms-icon";
 
 interface CardTechsProps {
@@ -8,14 +7,12 @@ interface CardTechsProps {
 
 export function CardTechs({ tech }: CardTechsProps) {
   return (
-    <div>
+    <div className="flex items-center gap-4 bg-[#202024] border-2 border-[#323238] rounded-md w-[210px] h-[50px] px-4 py-2">
+      <div className="text-2xl">
+        <CMSIcon icon={tech.iconSvg} />
+      </div>
       <div>
-        <div className="flex items-center gap-4 bg-[#202024] border-2 border-[#323238] rounded-md w-[210px] h-[50px] px-4 py-2">
-          <div className="text-2xl">
-            <CMSIcon icon={tech.iconSvg} />
-          </div>
-          <span className="text-base text-[#E1E1E6]">{tech.name}</span>
-        </div>
+        <span className="text-base text-[#E1E1E6]">{tech.name}</span>
       </div>
     </div>
   );

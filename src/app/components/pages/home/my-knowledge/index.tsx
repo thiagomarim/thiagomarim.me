@@ -13,7 +13,7 @@ export function MyKnowledge({ techs }: MyKnowledgeProps) {
   return (
     <section className="container py-16">
       <Title
-        title="Meus Conhecimentos"
+        title="Tecnologias e Ferramentas"
         desc="Fique a vontade para explorar todas as minhas competências e meus conhecimentos."
       />
       <div>
@@ -21,7 +21,7 @@ export function MyKnowledge({ techs }: MyKnowledgeProps) {
           <div className="flex items-center justify-center lg:justify-normal gap-4 flex-wrap">
             {techs.map((tech, i) => (
               <motion.div
-                key={tech.name}
+                key={i}
                 initial={{ opacity: 0, x: -150 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -150 }}

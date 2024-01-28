@@ -19,7 +19,7 @@ export function About({ aboutInfo }: AboutProps) {
         desc="Aqui você irá saber um pouco mais sobre mim."
       />
       <motion.div
-        className="flex gap-2 xl:gap-14 flex-wrap md:flex-nowrap justify-center xl:justify-normal items-center m-auto bg-[#202024] border-[1px] border-[#323238] rounded-md"
+        className="flex gap-2 xl:gap-14 flex-wrap md:flex-nowrap justify-center xl:justify-normal items-center m-auto bg-[#202024] border-2 border-[#323238] rounded-md"
         initial={{ opacity: 0, x: -150 }}
         whileInView={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -150 }}
