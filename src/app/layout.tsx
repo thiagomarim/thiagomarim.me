@@ -5,6 +5,7 @@ import { Header } from "./components/header";
 import { ContactForm } from "./components/contact-form";
 import { Footer } from "./components/footer";
 import { Toaster } from "./components/toaster";
+import { BackToTop } from "./components/back-to-top";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <Toaster />
-
+        <BackToTop />
         <Header />
         {children}
         <ContactForm />

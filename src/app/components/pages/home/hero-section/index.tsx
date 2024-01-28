@@ -4,6 +4,7 @@ import { CMSIcon } from "../../../cms-icon";
 import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 interface HeroSectionProps {
   homeInfo: HomePageInfo;
@@ -11,8 +12,8 @@ interface HeroSectionProps {
 
 export function HeroSection({ homeInfo }: HeroSectionProps) {
   return (
-    <section className="w-full lg:h-[755px] bg-hero-image bg-start bg-no-repeat flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px]">
-      <div className="container flex items-center text-center lg:text-start justify-center lg:items-start lg:justify-between flex-col lg:flex-row">
+    <section className="w-full mb-16 lg:h-[755px] bg-hero-image bg-center bg-no-repeat flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px]">
+      <div className="container flex items-center text-center justify-center flex-col lg:gap-20">
         <motion.div
           className="w-full flex flex-col gap-2 lg:gap-5"
           initial={{ opacity: 0, y: -150 }}
@@ -20,13 +21,13 @@ export function HeroSection({ homeInfo }: HeroSectionProps) {
           exit={{ opacity: 0, y: -150 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="flex items-center gap-5 justify-center lg:justify-normal text-4xl sm:text-6xl font-bold text-white before:content-[''] before:w-[10px] before:bg-blue-500 before:h-[26px] sm:before:content-[''] sm:before:bg-blue-500 sm:before:w-[15px] sm:before:h-[50px] sm:before:inline-block">
+          <span className="flex items-center gap-5 justify-center text-4xl sm:text-6xl font-bold text-white before:content-[''] before:w-[10px] before:bg-blue-500 before:h-[26px] sm:before:content-[''] sm:before:bg-blue-500 sm:before:w-[15px] sm:before:h-[50px] sm:before:inline-block">
             Desenvolvedor
           </span>
-          <span className="text-4xl sm:text-6xl font-bold lg:ml-[35px] text-white">
+          <span className="text-4xl sm:text-6xl font-bold text-white">
             Front-end
           </span>
-          <span className="text-[#A9A9B2] lg:ml-[35px] sm:text-lg  lg:text-xl text-center lg:text-start">
+          <span className="text-[#A9A9B2] sm:text-lg  lg:text-xl text-center mb-4">
             Localizado em São Paulo - Brazil
           </span>
         </motion.div>
@@ -73,12 +74,12 @@ export function HeroSection({ homeInfo }: HeroSectionProps) {
             />
           </motion.div>
           <div>
-            <span className="text-[#E1E1E6] text-lg lg:text-xl">
-              Olá, eu sou <strong>Thiago Soares Marim</strong>, Desenvolvedor
-              totalmente apaixonado pelo Front-end.
+            <span className="text-[#A9A9B2] text-lg lg:text-xl">
+              Olá, eu sou Thiago Soares Marim, um Desenvolvedor totalmente
+              apaixonado pelo Front-end.
             </span>
           </div>
-          <div className="flex text-2xl items-center gap-5 justify-center lg:justify-start">
+          <div className="flex text-2xl items-center gap-5 justify-center">
             {homeInfo.socials.map((contact, i) => (
               <a
                 key={i}

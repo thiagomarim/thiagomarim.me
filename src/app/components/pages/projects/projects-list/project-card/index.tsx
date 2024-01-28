@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col rounded-lg h-[450px] bg-[#202024] overflow-hidden border-2 border-[#323238] group">
+    <div className="flex flex-col rounded-lg h-[500px] bg-[#202024] border-2 border-[#323238] group">
       <div className="w-full h-48 overflow-hidden">
         <Image
           src={project.thumbnail.url}
@@ -17,16 +17,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
           width={380}
           height={200}
           unoptimized
-          className="w-full h-full object-cover group-hover:scale-110 transition-all group-hover:duration-500 opacity-70 group-hover:opacity-100 "
+          className="w-full rounded-md h-full object-cover group-hover:scale-110 transition-all group-hover:duration-500 opacity-70 group-hover:opacity-100 px-8 pt-8"
         />
       </div>
 
       <div className="flex flex-col flex-1 p-8">
         <strong className="text-[#E1E1E6] text-xl">{project.title}</strong>
-        <div className="text-[#A9A9B2] text-base mt-2">
+        <div className="text-[#A9A9B2] text-base mt-2 h-[120px]">
           {project.shortDescription}
         </div>
-        <div className="flex items-center flex-wrap gap-2 mt-3">
+        <div className="flex items-center flex-wrap gap-2">
           {project.technologies.map((tech) => (
             <span
               key={tech.name}
@@ -37,7 +37,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 mt-3">
+        <div className="flex items-center gap-2 mt-6">
           <a
             href={project.liveProjectUrl}
             target="_blank"
