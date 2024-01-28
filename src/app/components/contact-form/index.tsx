@@ -83,9 +83,9 @@ export function ContactForm() {
           <Title title="Fale comigo" />
           <motion.div
             className="flex flex-col flex-wrap gap-10"
-            initial={{ opacity: 0, x: 150 }}
+            initial={{ opacity: 0, x: -150 }}
             whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 150 }}
+            exit={{ opacity: 0, x: -150 }}
             transition={{ duration: 0.5 }}
           >
             <SocialNetworks

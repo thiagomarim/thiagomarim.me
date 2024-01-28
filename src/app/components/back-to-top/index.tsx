@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useCallback, useEffect } from "react";
 import { TbArrowNarrowUp } from "react-icons/tb";
 
@@ -21,17 +22,22 @@ export function BackToTop() {
   }, [handleScroll]);
 
   return (
-    <>
+    <AnimatePresence>
       {show && (
-        <div className="fixed right-4 bottom-4 z-20">
+        <motion.div
+          className="fixed right-4 bottom-4 z-20"
+          initial={{ opacity: 0, right: -10 }}
+          animate={{ opacity: 1, right: 16 }}
+          exit={{ opacity: 0, right: -10 }}
+        >
           <button
             onClick={scrollToTop}
             className="bg-[#121214] border-2 border-[#323238] rounded-lg p-2"
           >
             <TbArrowNarrowUp size={20} />
           </button>
-        </div>
+        </motion.div>
       )}
-    </>
+    </AnimatePresence>
   );
 }
