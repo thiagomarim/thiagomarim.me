@@ -1,7 +1,7 @@
 "use client";
 
 import { RichText } from "@/app/components/rich-text";
-import { Title } from "@/app/components/Title";
+import { Title } from "@/app/components/title";
 import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
 import { HiDownload } from "react-icons/hi";

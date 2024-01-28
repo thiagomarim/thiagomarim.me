@@ -1,5 +1,5 @@
 import { Link } from "@/app/components/link";
-import { Title } from "@/app/components/Title";
+import { Title } from "@/app/components/title";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 
 export function PageIntroduction() {

@@ -1,6 +1,6 @@
-import { Card } from "@/app/components/Card";
+import { Card } from "@/app/components/card";
 import { Link } from "@/app/components/link";
-import { Title } from "@/app/components/Title";
+import { Title } from "@/app/components/title";
 import { Project } from "@/app/types/project";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
