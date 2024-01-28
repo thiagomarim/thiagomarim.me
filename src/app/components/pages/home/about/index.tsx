@@ -1,11 +1,11 @@
 "use client";
 
 import { RichText } from "@/app/components/rich-text";
-import { Title } from "@/app/components/title";
 import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
 import { HiDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { Title } from "@/app/components/title";
 
 interface AboutProps {
   aboutInfo: HomePageInfo;

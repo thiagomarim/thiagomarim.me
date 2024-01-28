@@ -1,6 +1,5 @@
 "use client";
 
-import { Title } from "../title";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Button } from "../button";
 import { useForm } from "react-hook-form";
@@ -12,6 +11,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
+import { Title } from "@/app/components/title";
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
