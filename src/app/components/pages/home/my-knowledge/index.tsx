@@ -1,7 +1,7 @@
 "use client";
 
 import { CardTechs } from "@/app/components/cardtechs";
-import { Title } from "@/app/components/title";
+import { Title } from "@/app/components/Title";
 import { KnownTech } from "@/app/types/project";
 import { motion } from "framer-motion";
 

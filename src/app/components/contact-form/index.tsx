@@ -1,6 +1,6 @@
 "use client";
 
-import { Title } from "../title";
+import { Title } from "../Title";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Button } from "../button";
 import { useForm } from "react-hook-form";
