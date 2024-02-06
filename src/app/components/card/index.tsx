@@ -6,6 +6,9 @@ import { FaGithub } from "react-icons/fa";
 import { Project } from "@/app/types/project";
 import { motion } from "framer-motion";
 
+import * as Dialog from "@radix-ui/react-dialog";
+import { IoMdClose } from "react-icons/io";
+
 interface CardProps {
   project: Project;
 }
@@ -19,15 +22,36 @@ export function Card({ project }: CardProps) {
       exit={{ opacity: 0, x: -150 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="py-6 px-6">
-        <Image
-          src={project.thumbnail.url}
-          alt={`Thumbnail do projeto ${project.title}`}
-          width={420}
-          height={304}
-          className="rounded-md"
-        />
-      </div>
+      <Dialog.Root>
+        <div className="py-6 px-6">
+          <Dialog.Trigger>
+            <Image
+              src={project.thumbnail.url}
+              alt={`Thumbnail do projeto ${project.title}`}
+              width={420}
+              height={304}
+              className="rounded-md hover:cursor-zoom-in outline-none hover:scale-95 transition-all duration-300"
+            />
+          </Dialog.Trigger>
+        </div>
+        <Dialog.Portal>
+          <Dialog.Overlay className="inset-0 fixed bg-black/60" />
+          <Dialog.Content className="z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <Dialog.Close className="absolute right-0 top-0 p-1.5 bg-[#121214]">
+              <IoMdClose size={20} />
+            </Dialog.Close>
+            <Image
+              src={project.thumbnail.url}
+              alt={`Thumbnail do projeto ${project.title}`}
+              width={700}
+              height={400}
+              className="outline-none"
+              quality={100}
+            />
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
+
       <div className="flex flex-col justify-center mb-6 sm:mb-6 xl:mb-0 mt-0 md:mt-5 xl:mt-0 mx-5 xl:mx-0">
         <div className="flex items-center justify-between">
           <h3 className="flex items-center gap-2 text-[#E1E1E6] text-xl mb-2 text-center sm:text-start">
