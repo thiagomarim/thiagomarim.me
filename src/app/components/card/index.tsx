@@ -77,7 +77,7 @@ export function Card({ project }: CardProps) {
           <a
             href={project.liveProjectUrl}
             target="_blank"
-            className="flex items-center gap-2 mt-6 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all"
+            className="flex items-center gap-2 mt-6 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all hover:duration-300"
           >
             <TiArrowForward />
             Visitar
@@ -85,7 +85,7 @@ export function Card({ project }: CardProps) {
           <a
             href={project.githubUrl}
             target="_blank"
-            className="flex items-center gap-2 mt-6 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all"
+            className="flex items-center gap-2 mt-6 bg-[#121214] py-2 px-4 max-w-max rounded-lg border-2 border-[#323238] text-gray-300 text-sm hover:scale-95 transition-all hover:duration-300"
           >
             <FaGithub />
             Código Fonte

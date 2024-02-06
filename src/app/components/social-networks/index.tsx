@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { MdOutlineEmail } from "react-icons/md";
 
 interface SocialNetworksProps {
   type: string;
@@ -24,7 +23,7 @@ export function SocialNetworks({
       <a
         href={link}
         target="_blank"
-        className="text-white text-[14px] flex items-center justify-center gap-2 text-center border-2 border-[#323238] bg-[#202024] hover:bg-[#323238] py-3 px-2 rounded-md mt-2 lg:mt-2 hover:scale-95 transition-all"
+        className="text-white text-[14px] flex items-center justify-center gap-2 text-center border-2 border-[#323238] bg-[#202024] hover:bg-[#323238] py-3 px-2 rounded-md mt-2 lg:mt-2 hover:scale-95 transition-all hover:duration-300"
       >
         Entrar em contato <HiArrowNarrowRight size={18} />
       </a>
