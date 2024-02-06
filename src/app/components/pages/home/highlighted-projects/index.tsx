@@ -15,11 +15,13 @@ export function HighlightedProjects({ projects }: HighlightedProjectsProps) {
         title="Projetos em destaques"
         desc="Aqui você verá os meus projetos em destaques, fique a vontade para explorar todos."
       />
-      {projects?.map((project) => (
-        <div key={project.title}>
-          <Card project={project} />
-        </div>
-      ))}
+      <div className="odd:bg-red-500">
+        {projects?.map((project) => (
+          <div key={project.title}>
+            <Card project={project} />
+          </div>
+        ))}
+      </div>
 
       <Link href="/projects">
         Se interessou em algum? Ver todos

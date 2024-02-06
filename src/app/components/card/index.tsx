@@ -16,7 +16,7 @@ interface CardProps {
 export function Card({ project }: CardProps) {
   return (
     <motion.div
-      className="flex gap-2 xl:gap-14 flex-wrap md:flex-nowrap justify-center xl:justify-normal items-center m-auto bg-[#202024] border-2 border-[#323238] my-14 rounded-md"
+      className="flex gap-2 flex-row xl:gap-14 flex-wrap md:flex-nowrap justify-center lg:justify-normal items-center m-auto bg-[#202024] border-2 border-[#323238] my-14 rounded-md"
       initial={{ opacity: 0, x: -150 }}
       whileInView={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -150 }}
@@ -28,8 +28,9 @@ export function Card({ project }: CardProps) {
             <Image
               src={project.thumbnail.url}
               alt={`Thumbnail do projeto ${project.title}`}
-              width={420}
-              height={304}
+              width={383}
+              height={215}
+              quality={100}
               className="rounded-md hover:cursor-zoom-in outline-none hover:scale-95 transition-all duration-300"
             />
           </Dialog.Trigger>
@@ -43,9 +44,9 @@ export function Card({ project }: CardProps) {
             <Image
               src={project.thumbnail.url}
               alt={`Thumbnail do projeto ${project.title}`}
-              width={700}
-              height={400}
-              className="outline-none"
+              className="w-full h-full"
+              width={1280}
+              height={720}
               quality={100}
             />
           </Dialog.Content>

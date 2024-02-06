@@ -21,7 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               width={380}
               height={200}
               unoptimized
-              className="w-full rounded-sm h-full object-cover group-hover:scale-110 transition-all group-hover:duration-500 opacity-70 group-hover:opacity-100 hover:cursor-zoom-in px-8 pt-8"
+              className="w-full rounded-sm h-full object-cover group-hover:scale-110 transition-all group-hover:duration-500 opacity-70 group-hover:opacity-100 hover:cursor-zoom-in"
             />
           </Dialog.Trigger>
         </div>
@@ -34,8 +34,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Image
               src={project.thumbnail.url}
               alt={`Thumbnail do projeto ${project.title}`}
-              width={700}
-              height={400}
+              width={1280}
+              height={720}
               className="outline-none"
               quality={100}
             />
@@ -44,14 +44,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </Dialog.Root>
       <div className="flex flex-col flex-1 p-8">
         <strong className="text-[#E1E1E6] text-xl">{project.title}</strong>
-        <div className="text-[#A9A9B2] text-base mt-2 mb-4 h-[120px] flex-1">
+        <p className="text-[#A9A9B2] text-base mt-2 mb-4 h-[120px] flex-1">
           {project.shortDescription}
-        </div>
-        <div className="flex items-center flex-wrap gap-2">
+        </p>
+        <div className="flex items-center gap-2 truncate">
           {project.technologies.map((tech) => (
             <span
               key={tech.name}
-              className="max-w-max text-[#E1E1E6] bg-blue-500 text-sm py-1 px-2 rounded-md"
+              className="text-gray-300 text-sm font-medium block mt-auto p-1 bg-blue-500  rounded-md"
             >
               {tech.name}
             </span>
