@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useCallback, useEffect } from "react";
-import { TbArrowNarrowUp } from "react-icons/tb";
+import { MdKeyboardArrowUp } from "react-icons/md";
 
 export function BackToTop() {
   const [show, setShow] = useState(false);
@@ -34,7 +34,7 @@ export function BackToTop() {
             onClick={scrollToTop}
             className="bg-[#121214] border-2 border-[#323238] rounded-lg p-2"
           >
-            <TbArrowNarrowUp size={20} />
+            <MdKeyboardArrowUp size={20} />
           </button>
         </motion.div>
       )}
